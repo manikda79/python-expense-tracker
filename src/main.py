@@ -6,6 +6,13 @@ Author: Manikanta Elaprolu
 Version: 1.0.0
 """
 
+from expense_manager import (
+    add_expense,
+    view_expenses,
+    search_expense,
+    delete_expense,
+)
+
 
 def show_welcome():
     print("=" * 50)
@@ -34,6 +41,8 @@ def show_analytics_menu():
     print("5. Spending Trend")
     print("6. Back")
 
+    input("\nPress Enter to return to Main Menu...")
+
 
 def show_settings_menu():
     print("\n========== SETTINGS ==========")
@@ -42,6 +51,8 @@ def show_settings_menu():
     print("3. Export Data")
     print("4. About")
     print("5. Back")
+
+    input("\nPress Enter to return to Main Menu...")
 
 
 def main():
@@ -53,27 +64,26 @@ def main():
         choice = input("\nEnter your choice: ")
 
         if choice == "1":
-            print("\n🚧 Add Expense - Coming Soon")
+            add_expense()
 
         elif choice == "2":
-            print("\n🚧 View Expenses - Coming Soon")
+            view_expenses()
 
         elif choice == "3":
-            print("\n🚧 Search Expense - Coming Soon")
+            search_expense()
 
         elif choice == "4":
-            print("\n🚧 Delete Expense - Coming Soon")
+            delete_expense()
 
         elif choice == "5":
             show_analytics_menu()
-            input("\nPress Enter to return to Main Menu...")
 
         elif choice == "6":
             show_settings_menu()
-            input("\nPress Enter to return to Main Menu...")
 
         elif choice == "7":
             print("\nThank you for using Smart Expense Tracker!")
+            print("Have a great day! 👋")
             break
 
         else:
